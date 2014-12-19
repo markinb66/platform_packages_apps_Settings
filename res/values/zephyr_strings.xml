@@ -960,4 +960,13 @@
 
    <!-- App details: open play store link if app is user installed -->
    <string name="app_play_store">Google Play</string>
+
+   <!-- Weather in status bar -->
+   <string name="status_bar_show_weather_title">Show weather</string>
+   <string name="status_bar_show_weather_summary">Show the weather in the status bar header</string>
+
+   <!--- Lock clock -->
+   <string name="lock_clock_title">Clock widget</string>
+   <string name="lock_clock_summary">View or change how the \'cLock\' widget will display</string>
+   <string name="weather_clock_title">Status bar weather</string>
 </resources>
