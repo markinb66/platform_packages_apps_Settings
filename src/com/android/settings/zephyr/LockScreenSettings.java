@@ -16,13 +16,18 @@ import com.android.internal.logging.MetricsLogger;
 public class LockScreenSettings extends SettingsPreferenceFragment implements
         OnPreferenceChangeListener {
 
-		// private variables here
-		
+    private static final String LSWEATHER = "ls_weather";
+
+    private Preference mLsWeather;
+
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
 
         addPreferencesFromResource(R.xml.lock_screen_settings);
+
+        mLsWeather = (Preference)findPreference(LSWEATHER);
+
     }
 
     @Override

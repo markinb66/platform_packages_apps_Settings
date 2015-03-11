@@ -19,6 +19,7 @@
              <extra android:name="useAppPickerOnly" android:value="true" />
              <extra android:name="fragment" android:value="com.android.settings.slim.fragments.LockscreenShortcutFragment" />
         </PreferenceScreen>
+   </PreferenceCategory>
 
         <PreferenceScreen
         android:key="lock_screen_visualizer_settings"
@@ -33,7 +34,10 @@
          android:targetPackage="com.android.systemui"
          android:targetClass="com.android.systemui.cm.LockscreenShortcutsActivity" />
         </PreferenceScreen>
-    </PreferenceCategory>
- 
+
+        <Preference
+            android:key="ls_weather"
+            android:title="@string/lockscreen_weather_fragment_title"
+            android:summary="@string/lockscreen_weather_summary" />
 </PreferenceScreen>
 
