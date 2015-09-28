@@ -104,4 +104,25 @@
             android:dependency="translucent_quick_settings_pref"
             android:defaultValue="60" />
     </PreferenceCategory>
+
+    <PreferenceCategory
+        android:key="blur_lockscreen"
+        android:title="@string/blur_lockscreen" >
+
+       <com.android.settings.preference.SystemSettingSwitchPreference
+            android:key="lockscreen_see_through"
+            android:title="@string/lockscreen_see_through_title"
+            android:summary="@string/lockscreen_see_through_summary"
+            android:defaultValue="false" />
+
+       <com.android.settings.aosip.seekbar.SeekBarPreference
+            android:key="lockscreen_blur_radius"
+            android:title="@string/lockscreen_blur_radius"
+            android:max="25"
+            settings:min="0"
+            settings:unitsLeft=""
+            settings:unitsRight=""
+            android:persistent="false"
+            android:dependency="lockscreen_see_through" />
+     </PreferenceCategory>
 </PreferenceScreen>

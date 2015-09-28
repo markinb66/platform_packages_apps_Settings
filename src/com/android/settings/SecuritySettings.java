@@ -60,6 +60,7 @@ import com.android.settings.search.BaseSearchIndexProvider;
 import com.android.settings.search.Index;
 import com.android.settings.search.Indexable;
 import com.android.settings.search.SearchIndexableRaw;
+import com.android.settings.chameleonos.SeekBarPreference;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -103,6 +104,7 @@ public class SecuritySettings extends SettingsPreferenceFragment
     private static final String PACKAGE_MIME_TYPE = "application/vnd.android.package-archive";
     private static final String KEY_TRUST_AGENT = "trust_agent";
     private static final String KEY_SCREEN_PINNING = "screen_pinning_settings";
+    private static final String KEY_BLUR_RADIUS = "lockscreen_blur_radius";
     private static final String KEY_PACKAGE_INSTALL_OVERLAY_CHECK = "toggle_package_install_overlay_check";
 
     // These switch preferences need special handling since they're not all stored in Settings.
@@ -133,6 +135,7 @@ public class SecuritySettings extends SettingsPreferenceFragment
     private SwitchPreference mToggleAppInstallation;
     private DialogInterface mWarnInstallApps;
     private SwitchPreference mPowerButtonInstantlyLocks;
+    private SeekBarPreference mBlurRadius;
     private SwitchPreference mPackageInstallOverlayCheck;
 
     private boolean mIsPrimary;
@@ -347,6 +350,16 @@ public class SecuritySettings extends SettingsPreferenceFragment
 
 	mPackageInstallOverlayCheck = (SwitchPreference) findPreference(
                 KEY_PACKAGE_INSTALL_OVERLAY_CHECK);
+
+        // Blur
+        mBlurRadius =
+                (SeekBarPreference) findPreference(KEY_BLUR_RADIUS);
+        if (mBlurRadius != null) {
+            int blurRadius = Settings.System.getInt(getContentResolver(),
+                    Settings.System.LOCKSCREEN_BLUR_RADIUS, 14);
+            mBlurRadius.setValue(blurRadius);
+            mBlurRadius.setOnPreferenceChangeListener(this);
+        }
 
         // the index. This call is expected to be fairly cheap, but we may want to do something
         // smarter in the future.
@@ -731,6 +744,10 @@ public class SecuritySettings extends SettingsPreferenceFragment
             } else {
                 setNonMarketAppsAllowed(false);
 		}
+        } else if (KEY_BLUR_RADIUS.equals(key)) {
+            int bluRadius = (Integer) value;
+            Settings.System.putInt(getActivity().getContentResolver(),
+                    Settings.System.LOCKSCREEN_BLUR_RADIUS, bluRadius);
         } else if (preference == mBlockOnSecureKeyguard) {
             Settings.Secure.putInt(getContentResolver(),
                     Settings.Secure.STATUS_BAR_LOCKED_ON_SECURE_KEYGUARD,
