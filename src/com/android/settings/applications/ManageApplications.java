@@ -132,7 +132,7 @@ public class ManageApplications extends InstrumentedFragment
     public static final int FILTER_APPS_WITH_OVERLAY            = 13;
     public static final int FILTER_APPS_WRITE_SETTINGS          = 14;
     public static final int FILTER_APPS_SUBSTRATUM              = 15;
-    public static final int FILTER_APPS_NO_FLOATING             = 15;
+    public static final int FILTER_APPS_NO_FLOATING             = 16;
 
     // This is the string labels for the filter modes above, the order must be kept in sync.
     public static final int[] FILTER_LABELS = new int[] {
