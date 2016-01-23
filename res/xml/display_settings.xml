@@ -121,7 +121,9 @@
                 android:summaryOff="@string/summary_toast_icons_disabled"
                 android:defaultValue="true" />
 
-	<PreferenceCategory
+        <PreferenceCategory
+        android:key="dashboard_category"
+        android:title="@string/dashboard_category">
 
         <com.android.settings.preference.SystemSettingSwitchPreference
                 android:key="dashboard_tileview_dividers"
@@ -138,6 +140,12 @@
                 android:summary="@string/dashboard_switches_summary"
                 android:persistent="false" />
 
+        <com.android.settings.preference.SystemSettingSwitchPreference
+                android:key="dashboard_tileview_double_lines"
+                android:title="@string/dashboard_tileview_double_lines_title"
+                android:summaryOn="@string/dashboard_tileview_double_lines_summary_on"
+                android:summaryOff="@string/dashboard_tileview_double_lines_summary_off"
+                android:defaultValue="false" />
     </PreferenceCategory>
         
     <PreferenceCategory
