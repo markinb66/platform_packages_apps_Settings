@@ -18,7 +18,7 @@ public class LockScreenSettings extends SettingsPreferenceFragment implements
 
     private static final String LSWEATHER = "ls_weather";
 
-    private Preference mLsWeather;
+    private PreferenceScreen mLsWeather;
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
@@ -26,7 +26,7 @@ public class LockScreenSettings extends SettingsPreferenceFragment implements
 
         addPreferencesFromResource(R.xml.lock_screen_settings);
 
-        mLsWeather = (Preference)findPreference(LSWEATHER);
+        mLsWeather = (PreferenceScreen)findPreference(LSWEATHER);
 
     }
 

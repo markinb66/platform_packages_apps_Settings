@@ -24,6 +24,7 @@ import android.preference.PreferenceCategory;
 import android.preference.PreferenceFragment;
 import android.preference.PreferenceScreen;
 import android.provider.Settings;
+import com.android.settings.R;
 
 public class LockscreenWeather extends PreferenceFragment implements
         Preference.OnPreferenceChangeListener {

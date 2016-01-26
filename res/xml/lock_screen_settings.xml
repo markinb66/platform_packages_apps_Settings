@@ -35,9 +35,10 @@
          android:targetClass="com.android.systemui.cm.LockscreenShortcutsActivity" />
         </PreferenceScreen>
 
-        <Preference
+        <PreferenceScreen
             android:key="ls_weather"
             android:title="@string/lockscreen_weather_fragment_title"
-            android:summary="@string/lockscreen_weather_summary" />
+            android:summary="@string/lockscreen_weather_summary" 
+            android:fragment="com.android.settings.zephyr.LockscreenWeather" />
 </PreferenceScreen>
 
