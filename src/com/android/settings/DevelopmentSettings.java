@@ -30,6 +30,7 @@ import android.bluetooth.BluetoothAdapter;
 import android.content.ComponentName;
 import android.content.ContentResolver;
 import android.content.Context;
+import android.hardware.fingerprint.FingerprintManager;
 import android.content.DialogInterface;
 import android.content.Intent;
 import android.content.pm.ApplicationInfo;
@@ -70,12 +71,21 @@ import android.widget.Switch;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import android.provider.Settings.SettingNotFoundException;
+import com.android.internal.util.broken.AbstractAsyncSuCMDProcessor;
+import com.android.internal.util.broken.CMDProcessor;
+import com.android.internal.util.broken.Helpers;
+import com.android.internal.util.broken.BrokenUtils;
 import com.android.internal.logging.MetricsLogger;
+import com.android.settings.Utils;
 import com.android.settings.fuelgauge.InactiveApps;
 import com.android.settings.search.BaseSearchIndexProvider;
 import com.android.settings.search.Indexable;
 import com.android.settings.widget.SwitchBar;
 
+import java.io.File;
+import java.io.IOException;
+import java.io.DataOutputStream;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.HashSet;
@@ -279,6 +289,26 @@ public class DevelopmentSettings extends SettingsPreferenceFragment
     }
 
     @Override
+    public void onResume() {
+        super.onResume();
+    }
+
+    @Override
+    public boolean onPreferenceChange(Preference preference, Object newValue) {
+		if (preference == mSelinux) {
+            if (newValue.toString().equals("true")) {
+                CMDProcessor.runSuCommand("setenforce 1");
+                mSelinux.setSummary(R.string.selinux_enforcing_title);
+            } else if (newValue.toString().equals("false")) {
+                CMDProcessor.runSuCommand("setenforce 0");
+                mSelinux.setSummary(R.string.selinux_permissive_title);
+            }
+            return true;
+        }
+        return false;
+    }
+
+    @Override
     public void onCreate(Bundle icicle) {
         super.onCreate(icicle);
 
@@ -302,6 +332,21 @@ public class DevelopmentSettings extends SettingsPreferenceFragment
         }
 
         addPreferencesFromResource(R.xml.development_prefs);
+
+        final ContentResolver resolver = getActivity().getContentResolver();
+	    final PreferenceScreen prefScreen = getPreferenceScreen();
+
+        //SELinux
+        mSelinux = (SwitchPreference) findPreference(SELINUX);
+        mSelinux.setOnPreferenceChangeListener(this);
+
+        if (CMDProcessor.runShellCommand("getenforce").getStdout().contains("Enforcing")) {
+            mSelinux.setChecked(true);
+            mSelinux.setSummary(R.string.selinux_enforcing_title);
+        } else {
+            mSelinux.setChecked(false);
+            mSelinux.setSummary(R.string.selinux_permissive_title);
+        }
 
         final PreferenceGroup debugDebuggingCategory = (PreferenceGroup)
                 findPreference(DEBUG_DEBUGGING_CATEGORY_KEY);

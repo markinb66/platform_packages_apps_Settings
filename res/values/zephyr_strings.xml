@@ -981,4 +981,13 @@
    <string name="weather_condition_icon_monochrome_title">Monochrome</string>
    <string name="weather_condition_icon_colored_title">Colored</string>
    <string name="weather_condition_icon_vclouds_title">VClouds</string>
+
+   <!-- Homeless -->
+   <string name="homeless_title">Selinux toggle</string>
+   <string name="selinux_switch_title">Selinux Switch Options</string>
+   <string name="selinux_switch_summary">SELinux is a set of kernel modifications and user-space tools. Changing modes can cause unwanted effects. Use at your own risk.</string>
+   <string name="selinux_title">Selinux Mode</string>
+   <string name="selinux_permissive_title">Permissive</string>
+   <string name="selinux_enforcing_title">Enforcing</string>
+   <string name="selinux_permissive_toast_title">Selinux set to permissive</string>
 </resources>
