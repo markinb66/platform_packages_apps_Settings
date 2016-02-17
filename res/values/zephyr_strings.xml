@@ -1001,4 +1001,8 @@
    <string name="dashboard_switches_on">Switches On</string>
    <string name="dashboard_switches_summary">Change the position of the dashboard switches</string>
    <string name="dashboard_switches_dialog_title">Select switch state</string>
+
+   <!-- Dashboard tileview dividers -->
+   <string name="dashboard_tileview_dividers_title">Dashboard dividers</string>
+   <string name="dashboard_tileview_dividers_summary">Hide dashboard tile dividers</string>
 </resources>
