@@ -110,6 +110,7 @@ public class DevelopmentSettings extends SettingsPreferenceFragment
      */
     public static final String PREF_SHOW = "show";
 
+    private static final String SELINUX = "selinux";
     private static final String ENABLE_ADB = "enable_adb";
     private static final String CLEAR_ADB_KEYS = "clear_adb_keys";
     private static final String ENABLE_TERMINAL = "enable_terminal";
@@ -200,7 +201,8 @@ public class DevelopmentSettings extends SettingsPreferenceFragment
     private DevicePolicyManager mDpm;
     private UserManager mUm;
     private WifiManager mWifiManager;
-
+    private SwitchPreference mSelinux;
+  
     private SwitchBar mSwitchBar;
     private boolean mLastEnabledState;
     private boolean mHaveDebugSettings;
