@@ -21,6 +21,7 @@ import com.android.settings.zephyr.StatusBarSettings;
 import com.android.settings.zephyr.NavigationBarSettings;
 import com.android.settings.zephyr.LockScreenSettings;
 import com.android.settings.zephyr.PagerSlidingTabStrip;
+import com.android.settings.xosp.BlurPersonalizations;
 import com.android.settings.cyanogenmod.NotificationDrawerSettings;
 import com.android.settings.R;
 import com.android.settings.Utils;
@@ -86,6 +87,7 @@ public class AdditionalSettings extends SettingsPreferenceFragment {
             frags[1] = new NavigationBarSettings();
             frags[2] = new LockScreenSettings();      
 	    frags[3] = new NotificationDrawerSettings();
+            frags[4] = new BlurPersonalizations();
         }
 
         @Override
@@ -110,7 +112,8 @@ public class AdditionalSettings extends SettingsPreferenceFragment {
 		    getString(R.string.status_bar_title),
                     getString(R.string.navigation_bar_title),
                     getString(R.string.lock_screen_title),
-		    getString(R.string.notification_drawer_title)};
+		    getString(R.string.notification_drawer_title),
+                    getString(R.string.xosp_settings_blur_cat)};
         return titleString;
     }
 
