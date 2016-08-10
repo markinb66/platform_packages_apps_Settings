@@ -413,10 +413,10 @@
     <string name="name_2">Sri Harsha</string>
     <string name="name_3">Akhil Narang</string>
     <string name="name_4">Adarsh-MR</string>
-    <string name="name_5">BrokenRom</string>
+    <string name="name_5">Recenz Tastic</string>
     <string name="name_6">BenzoRom</string>
     <string name="name_7">AOSIP</string>
-    <string name="name_8">Slim roms</string>
+    <string name="name_8">BrokenRom</string>
     <string name="name_9">CyanogenMod</string>
     <string name="name_10">AICP</string>
     <string name="name_11">SAOSP-M</string>
@@ -493,6 +493,8 @@
     <string name="qs_tile_ambient_display">Ambient display</string>
     <string name="qs_expanded_desktop_tile">Expanded desktop</string>
     <string name="qs_tile_music">Music</string>
+    <string name="qs_battery_saver_tile">Battery saver</string>
+    <string name="qs_tile_substratum">Substratum</string>
     <string name="qs_action_add">Add</string>
     <string name="qs_action_no_more_tiles">No more tiles available</string>
     <string name="quick_settings_reset_message">Reset quick settings tiles?</string>

@@ -159,6 +159,10 @@ public class QSTileHolder {
                 resourceName = "ic_qs_media_play";
                 stringId = R.string.qs_tile_music;
                 break;
+            case QSConstants.TILE_SUBSTRATUM:
+                resourceName = "ic_qs_substratum";
+                stringId = R.string.qs_tile_substratum;
+                break;
             default:
                 return null;
         }
