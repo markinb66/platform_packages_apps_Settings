@@ -409,21 +409,30 @@
 
     <!-- Credits -->
     <string name="name_1">PrinceTrishi(StarkDroid)</string>
-    <string name="name1_description">Owner of zephyrOS</string>
+    <string name="name1_description">ZephyrOS Lead</string>
     <string name="name_2">Sri Harsha</string>
+    <string name="name2_description">AOSP-OMS Lead dev</string>
     <string name="name_3">Akhil Narang</string>
+    <string name="name3_description">AOSP-OMS Lead dev</string>
     <string name="name_4">Adarsh-MR</string>
+    <string name="name4_description">Designer</string>
     <string name="name_5">Recenz Tastic</string>
+    <string name="name5_description">Bootanimation</string>
     <string name="name_6">BenzoRom</string>
     <string name="name_7">AOSIP</string>
     <string name="name_8">BrokenRom</string>
     <string name="name_9">CyanogenMod</string>
     <string name="name_10">AICP</string>
     <string name="name_11">SAOSP-M</string>
-    <string name="name_12">AOSP-OMS(base rom)</string>
-    <string name="name_13">DirtyUnicorns[DUI]</string>
+    <string name="name_12">AOSP-OMS</string>
+    <string name="name12_description">Base Rom</string>
+    <string name="name_13">DirtyUnicorns</string>
+    <string name="name13_description">DUI[pulse/fling/smartbar]</string>
     <string name="name_14">GZR</string>
     <string name="name_15">TeamSubstratum</string>
+    <string name="name15_description">OMS/Substratum theming</string>
+    <string name="name_16">XOSP</string>
+    <string name="name16_description">BlurUI</string>
     <string name="credits">Buy them a beer!!!</string>
 
     <string name="notification_drawer_title">Notification drawer</string>

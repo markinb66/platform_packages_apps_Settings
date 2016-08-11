@@ -24,16 +24,20 @@ xmlns:android="http://schemas.android.com/apk/res/android"
                 android:summary="@string/name1_description"/>
 
  <Preference style="?android:preferenceInformationStyle"
-                android:title="@string/name_2" />
+                android:title="@string/name_2" 
+                android:summary="@string/name2_description"/>
 
 <Preference style="?android:preferenceInformationStyle"
-                android:title="@string/name_3" />
+                android:title="@string/name_3" 
+                android:summary="@string/name3_description"/>
 
 <Preference style="?android:preferenceInformationStyle"
-                android:title="@string/name_4" />
+                android:title="@string/name_4" 
+                android:summary="@string/name4_description"/>
 
 <Preference style="?android:preferenceInformationStyle"
-                android:title="@string/name_5" />
+                android:title="@string/name_5" 
+                android:summary="@string/name5_description"/>
 
 <Preference style="?android:preferenceInformationStyle"
                 android:title="@string/name_6" />
@@ -54,15 +58,22 @@ xmlns:android="http://schemas.android.com/apk/res/android"
                 android:title="@string/name_11" />
 
 <Preference style="?android:preferenceInformationStyle"
-                android:title="@string/name_12" />
+                android:title="@string/name_12" 
+                android:summary="@string/name12_description"/>
 
 <Preference style="?android:preferenceInformationStyle"
-                android:title="@string/name_13" />
+                android:title="@string/name_13" 
+                android:summary="@string/name13_description"/>
 
 <Preference style="?android:preferenceInformationStyle"
                 android:title="@string/name_14" />
 
 <Preference style="?android:preferenceInformationStyle"
-                android:title="@string/name_15" />
+                android:title="@string/name_15"
+                android:summary="@string/name15_description"/>
+
+<Preference style="?android:preferenceInformationStyle"
+                android:title="@string/name_16"
+                android:summary="@string/name16_description"/>
 </PreferenceScreen>
 
