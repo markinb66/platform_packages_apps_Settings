@@ -10,7 +10,7 @@ import android.widget.Toast;
 
 import com.android.internal.logging.MetricsLogger;
 import com.android.settings.R;
-import com.android.internal.util.broken.CMDProcessor;
+import com.android.internal.util.du.CMDProcessor;
 
 import java.io.IOException;
 import java.util.List;

@@ -72,10 +72,10 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import android.provider.Settings.SettingNotFoundException;
-import com.android.internal.util.broken.AbstractAsyncSuCMDProcessor;
-import com.android.internal.util.broken.CMDProcessor;
-import com.android.internal.util.broken.Helpers;
-import com.android.internal.util.broken.BrokenUtils;
+import com.android.internal.util.du.AbstractAsyncSuCMDProcessor;
+import com.android.internal.util.du.CMDProcessor;
+import com.android.internal.util.du.Helpers;
+import com.android.internal.util.du.DuUtils;
 import com.android.internal.logging.MetricsLogger;
 import com.android.settings.Utils;
 import com.android.settings.fuelgauge.InactiveApps;
@@ -288,26 +288,6 @@ public class DevelopmentSettings extends SettingsPreferenceFragment
     @Override
     protected int getMetricsCategory() {
         return MetricsLogger.DEVELOPMENT;
-    }
-
-    @Override
-    public void onResume() {
-        super.onResume();
-    }
-
-    @Override
-    public boolean onPreferenceChange(Preference preference, Object newValue) {
-		if (preference == mSelinux) {
-            if (newValue.toString().equals("true")) {
-                CMDProcessor.runSuCommand("setenforce 1");
-                mSelinux.setSummary(R.string.selinux_enforcing_title);
-            } else if (newValue.toString().equals("false")) {
-                CMDProcessor.runSuCommand("setenforce 0");
-                mSelinux.setSummary(R.string.selinux_permissive_title);
-            }
-            return true;
-        }
-        return false;
     }
 
     @Override
@@ -1853,6 +1833,15 @@ public class DevelopmentSettings extends SettingsPreferenceFragment
                 mRootDialog.setOnDismissListener(this);
             } else {
                 writeRootAccessOptions(newValue);
+            }
+            return true;
+            }else if (preference == mSelinux) {
+            if (newValue.toString().equals("true")) {
+                CMDProcessor.runSuCommand("setenforce 1");
+                mSelinux.setSummary(R.string.selinux_enforcing_title);
+            } else if (newValue.toString().equals("false")) {
+                CMDProcessor.runSuCommand("setenforce 0");
+                mSelinux.setSummary(R.string.selinux_permissive_title);
             }
             return true;
         }
