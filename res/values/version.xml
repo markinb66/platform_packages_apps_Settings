@@ -4,7 +4,7 @@
 
     <!-- ZephyrOS version -->
    <string name="zephyr_version_title">ZephyrOS version</string>
-   <string name="zephyr_version">V4.4</string>
+   <string name="zephyr_version">V5.0-Sentinel</string>
 
 </resources>
 
