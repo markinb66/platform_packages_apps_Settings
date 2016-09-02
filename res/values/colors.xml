@@ -102,4 +102,5 @@
 
     <!-- Accent color that matches the settings launcher icon -->
     <color name="icon_accent">#ffabffec</color>
+
 </resources>

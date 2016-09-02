@@ -470,33 +470,10 @@
     <string name="qs_advanced_location_summary">Enable advanced settings for location in quick settings</string>
 
     <!-- Quick Settings -->
+    <string name="quick_settings_title">Quick Settings/Tiles</string>
+    <string name="quick_settings_summary">Configure quick settings tiles</string>
     <string name="status_bar_icon_blacklist_title">Status bar icons</string>
     <string name="status_bar_icon_blacklist_summary">Configure what icons are shown on status bar</string>
-    <string name="qs_order_title">Select and order tiles</string>
-    <string name="add_qs">Add new tile</string>
-    <string name="qs_tiles_summary">Customize Quick Setting tiles</string>
-    <string name="qs_tile_wifi">Wi\u2011Fi</string>
-    <string name="qs_tile_bluetooth">Bluetooth</string>
-    <string name="qs_tile_display_inversion">Color inversion</string>
-    <string name="qs_tile_dnd">Do not disturb</string>
-    <string name="qs_tile_cellular_data">Data connection</string>
-    <string name="qs_tile_airplane_mode">Airplane mode</string>
-    <string name="qs_tile_display_rotation">Rotation</string>
-    <string name="qs_tile_flashlight">Flashlight</string>
-    <string name="qs_tile_location">Location</string>
-    <string name="qs_tile_cast_screen">Cast screen</string>
-    <string name="qs_tile_hotspot">Hotspot</string>
-    <string name="qs_tile_brightness">Brightness</string>
-    <string name="qs_tile_screen_timeout">Screen timeout</string>
-    <string name="qs_tile_screen_off">Screen off</string>  
-    <string name="qs_tile_usb_tether">USB tethering</string>
-    <string name="qs_tile_screenshot">Screenshot</string>
-    <string name="qs_tile_heads_up">Heads up</string>
-    <string name="qs_tile_volume_panel">Volume panel</string>
-    <string name="qs_action_delete">Delete</string>
-    <string name="qs_action_add">Add</string>
-    <string name="qs_action_no_more_tiles">No more tiles available</string>
-    <string name="quick_settings_reset_message">Reset quick settings tiles?</string>
 
     <!-- About phone screen, Zephyr device maintainer name -->
     <string name="device_maintainer">Device maintainer</string>

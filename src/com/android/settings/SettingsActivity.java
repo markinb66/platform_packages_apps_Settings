@@ -82,7 +82,6 @@ import com.android.settings.applications.UsageAccessDetails;
 import com.android.settings.applications.WriteSettingsDetails;
 import com.android.settings.bluetooth.BluetoothSettings;
 import com.android.settings.zephyr.DisplayRotation;
-import com.android.settings.cyanogenmod.qs.QSTiles;
 import com.android.settings.custom.BatteryBarSettings;
 import com.android.settings.custom.nav.FlingSettings;
 import com.android.settings.custom.nav.NavbarSettings;
@@ -367,13 +366,13 @@ public class SettingsActivity extends Activity
             DrawOverlayDetails.class.getName(),
             WriteSettingsDetails.class.getName(),
             DisplayRotation.class.getName(),
- 	    QSTiles.class.getName(),
             BatteryBarSettings.class.getName(),
             NavbarSettings.class.getName(),
             FlingSettings.class.getName(),
             SmartbarSettings.class.getName(),
             com.android.settings.candy.PrivacySettings.class.getName(),
-            PulseSettings.class.getName()
+            PulseSettings.class.getName(),
+            DisplayRotation.class.getName()
     };
 
 
