@@ -122,47 +122,6 @@ public class QSTileHolder {
                 resourceName = "ic_qs_heads_up_on";
                 stringId = R.string.qs_tile_heads_up;
                 break;
-            case QSConstants.TILE_NAVIGATION_BAR: 
-                resourceName = "ic_qs_smartbar";
-                stringId = R.string.quick_settings_smartbar;
-                stringId = R.string.quick_settings_navigation_bar;
-                break;
-            case QSConstants.TILE_FLOATING:
-                resourceName = "ic_qs_floating_peek";
-                stringId = R.string.qs_tile_floating;
-                break;
-            case QSConstants.TILE_NFC:
-                resourceName = "ic_qs_nfc_on";
-                stringId = R.string.qs_tile_nfc;
-                break;
-            case QSConstants.TILE_COMPASS:
-                resourceName = "ic_qs_compass_on";
-                stringId = R.string.qs_tile_compass;
-                break;
-            case QSConstants.TILE_SYNC:
-                resourceName = "ic_qs_sync_on";
-                stringId = R.string.qs_tile_sync;
-                break;
-            case QSConstants.TILE_BATTERY_SAVER:
-                resourceName = "ic_qs_battery_saver_on";
-                stringId = R.string.qs_battery_saver_tile;
-                break;
-            case QSConstants.TILE_EXPANDED_DESKTOP:
-                resourceName = "ic_qs_expanded_desktop";
-                stringId = R.string.qs_expanded_desktop_tile;
-                break;
-            case QSConstants.TILE_AMBIENT_DISPLAY:
-                resourceName = "ic_qs_ambientdisplay_on";
-                stringId = R.string.qs_tile_ambient_display;
-                break;
-            case QSConstants.TILE_MUSIC:
-                resourceName = "ic_qs_media_play";
-                stringId = R.string.qs_tile_music;
-                break;
-            case QSConstants.TILE_SUBSTRATUM:
-                resourceName = "ic_qs_substratum";
-                stringId = R.string.qs_tile_substratum;
-                break;
             default:
                 return null;
         }
