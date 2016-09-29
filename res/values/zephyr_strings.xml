@@ -452,4 +452,9 @@
     <string name="smartbar_config_restore_error_toast">Error restoring Smartbar profile</string>
     <string name="navbar_buttons_alpha_title">Button transparency</string>
     <string name="navigation_category">DUI</string>
+
+    <!-- device maintainer name -->
+    <string name="device_maintainer">Device maintainer</string>
+    <string name="device_maintainers">Device maintainers</string>
+    <string name="zephyr_device_maintainer">Device maintainer</string>
 </resources>
