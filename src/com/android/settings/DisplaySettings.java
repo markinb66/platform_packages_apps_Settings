@@ -92,15 +92,12 @@ public class DisplaySettings extends SettingsPreferenceFragment implements
             = "camera_double_tap_power_gesture";
     private static final String KEY_WALLPAPER = "wallpaper";
     private static final String KEY_VR_DISPLAY_PREF = "vr_display_pref";
-<<<<<<< HEAD
     private static final String KEY_NETWORK_NAME_DISPLAYED = "network_operator_display";
     private static final String SHOW_NETWORK_NAME_MODE = "show_network_name_mode";
     private static final int SHOW_NETWORK_NAME_ON = 1;
     private static final int SHOW_NETWORK_NAME_OFF = 0;
-=======
     private static final String KEY_WAKEUP_WHEN_PLUGGED_UNPLUGGED = "wakeup_when_plugged_unplugged";
     private static final String KEY_WAKEUP_CATEGORY = "category_wakeup_options";
->>>>>>> 210a1ea... PowerManager: Don't wake up device when charger is plugged/unplugged (2/2)
 
     private Preference mFontSizePref;
 
